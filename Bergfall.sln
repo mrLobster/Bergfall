@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bergfall.Web", "Web\Bergfall.Web.csproj", "{31329A15-BAE9-4401-97E0-A67E70CA9713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bergfall.Utils", "Utils\Bergfall.Utils.csproj", "{C811D586-C420-49AF-872F-B0D52C31E3B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bergfall.Data", "Data\Bergfall.Data.csproj", "{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Morten|Any CPU = Morten|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31329A15-BAE9-4401-97E0-A67E70CA9713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31329A15-BAE9-4401-97E0-A67E70CA9713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31329A15-BAE9-4401-97E0-A67E70CA9713}.Morten|Any CPU.ActiveCfg = Release|Any CPU
+		{31329A15-BAE9-4401-97E0-A67E70CA9713}.Morten|Any CPU.Build.0 = Release|Any CPU
+		{31329A15-BAE9-4401-97E0-A67E70CA9713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31329A15-BAE9-4401-97E0-A67E70CA9713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C811D586-C420-49AF-872F-B0D52C31E3B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C811D586-C420-49AF-872F-B0D52C31E3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C811D586-C420-49AF-872F-B0D52C31E3B9}.Morten|Any CPU.ActiveCfg = Morten|Any CPU
+		{C811D586-C420-49AF-872F-B0D52C31E3B9}.Morten|Any CPU.Build.0 = Morten|Any CPU
+		{C811D586-C420-49AF-872F-B0D52C31E3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C811D586-C420-49AF-872F-B0D52C31E3B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Morten|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Morten|Any CPU.Build.0 = Release|Any CPU
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
