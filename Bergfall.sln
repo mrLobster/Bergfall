@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bergfall.Utils", "Utils\Ber
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bergfall.Data", "Data\Bergfall.Data.csproj", "{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bergfall.Backend", "Bergfall.Backend\Bergfall.Backend.csproj", "{12538E26-99DD-456F-9B14-C6521EC5BE6E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C} = {F5A0FD12-3299-46C2-B5AE-14FA0904F18C}
+		{C811D586-C420-49AF-872F-B0D52C31E3B9} = {C811D586-C420-49AF-872F-B0D52C31E3B9}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +40,12 @@ Global
 		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Morten|Any CPU.Build.0 = Release|Any CPU
 		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5A0FD12-3299-46C2-B5AE-14FA0904F18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12538E26-99DD-456F-9B14-C6521EC5BE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12538E26-99DD-456F-9B14-C6521EC5BE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12538E26-99DD-456F-9B14-C6521EC5BE6E}.Morten|Any CPU.ActiveCfg = Release|Any CPU
+		{12538E26-99DD-456F-9B14-C6521EC5BE6E}.Morten|Any CPU.Build.0 = Release|Any CPU
+		{12538E26-99DD-456F-9B14-C6521EC5BE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12538E26-99DD-456F-9B14-C6521EC5BE6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
