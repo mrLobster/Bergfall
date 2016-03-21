@@ -1,38 +1,45 @@
 ﻿@model Bergfall.Web.ViewModels.DateAndNumberViewModel
 @section JavaScript
 {
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
         google.charts.load('current', { packages: ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart() 
+        function drawChart()
         {
             var data = new google.visualization.DataTable();
             data.addColumn("date", "Dato");
             var terms = ["c#","java"];
-            @for(int t=0;t<2;t++){
-                <text>
+            @for (int t = 0; t < 2; t++) {
+				<text>
             data.addColumn("number", terms[@t]);
             </text>
             }
 
             @for (int i = 0; i < Model.Dates.Count; i++)
             {
-                int[] nrs = Model.DatesAndNumbers[Model.Dates[i]];
-                //for (int j = 0; j < @nrs.Count(); j++)
-                //{
+
+               
+
+
                     <text>
-            data.addRow([new Date(@Model.Dates[i].Year,@Model.Dates[i].Month,@Model.Dates[i].Day), @nrs[i], 22]);
-            </text>
-                //}
-            }
-        
+            var b = @Model.GoogleChartsJavaScriptArray[i];
+            var a = new Date(b[0]);
+            b[0] = a;
+            
+                    //var currDate = [new Date(@Model.Dates[i].Year, @Model.Dates[i].Month, @Model.Dates[i].Day)];
+                //var arr = a.concat(nrs);
+                data.addRow(b);
+			</text>
+				}
+
+
             var chartDiv = document.getElementById('curve_chart');
             var chart = new google.visualization.LineChart(chartDiv);
             chart.draw(data);
         }
-    </script>
+	</script>
 }
 <div id="curve_chart" style="width: 900px; height: 500px"></div>
 

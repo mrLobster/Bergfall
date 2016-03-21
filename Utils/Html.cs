@@ -124,7 +124,7 @@ namespace Bergfall.Utils
                 smtp.Send(mail);
                 success = true;
             }
-            catch (Exception e)
+            catch(Exception)
             {
                 success = false;
             }

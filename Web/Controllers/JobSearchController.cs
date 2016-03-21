@@ -14,16 +14,9 @@ namespace Bergfall.Web.Controllers
 {
     public class JobSearchController : Controller
     {
-        string[] SearchItems = new string[] { "C#", "Java", "JavaScript", "Python" };
-        string FinnSearchURL = "http://m.finn.no/job/fulltime/search.html?sort=1&rows=400&q=";
-        Regex justNumbersRegex = new Regex(@"^(\d+)$");
-
         // GET: JobListing
         public ActionResult Index()
         {
-
-          
-
             using (var db = new BergfallDataContext())
             {
                 DateAndNumberViewModel datesAndNumbers = new DateAndNumberViewModel();
@@ -31,6 +24,7 @@ namespace Bergfall.Web.Controllers
                 datesAndNumbers.SearchTerms.AddRange(db.SearchTerms);
                 List<DateTime> dates = db.JobSearch.Select(d => d.RetrievedDate).Distinct().OrderBy(d => d).ToList();
                 datesAndNumbers.Dates = dates;
+                datesAndNumbers.DatesAndNumbers = new Dictionary<DateTime, int[]>();
 
                 var list = db.JobSearch.OrderBy(j => j.RetrievedDate).ThenBy(j => j.SearchTerm).ToList();
                 var nrOfSearchTerms = db.SearchTerms.Count();
@@ -47,8 +41,15 @@ namespace Bergfall.Web.Controllers
                     }
                     datesAndNumbers.DatesAndNumbers.Add(currDateTime, numbers);
                 }
+                datesAndNumbers.GoogleChartsJavaScriptArray = DictionaryToJavaScriptArray(datesAndNumbers.DatesAndNumbers);
                 return View(datesAndNumbers);
             }
+        }
+        string DictionaryToJavaScriptArray(Dictionary<DateTime, int[]> dict)
+        {
+            var entries = dict.Select(d =>
+                string.Format("[{0},{1}]", d.Key, string.Join(",", d.Value)));
+            return "{" + string.Join(",", entries) + "}";
         }
         public ActionResult JobSearch(string searchTerm)
         {

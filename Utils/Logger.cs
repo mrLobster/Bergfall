@@ -16,7 +16,7 @@ namespace Bergfall.Utils
                 _fs = new FileStream(logFilePath, FileMode.OpenOrCreate);
                 _sw = new StreamWriter(_fs);
             }
-            catch (Exception exp)
+            catch (Exception)
             {
             }
         }

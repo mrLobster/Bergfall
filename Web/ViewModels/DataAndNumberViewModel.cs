@@ -10,7 +10,8 @@ namespace Bergfall.Web.ViewModels
     {
         public List<SearchTerm> SearchTerms { get; set; }
         public List<DateTime> Dates { get; set; }
-        public Dictionary<DateTime, int[]> DatesAndNumbers = new Dictionary<DateTime, int[]>();
+        public Dictionary<DateTime, int[]> DatesAndNumbers { get; set; }
+        public string GoogleChartsJavaScriptArray { get; set; }
     }
     
 }

@@ -22,7 +22,8 @@ namespace Bergfall.Web.Controllers
                 {
                     if (db.JobSearch.Count(j => j.RetrievedDate == DateTime.Today) > 0)
                     {
-                    return;
+                    
+                    
                     }
                     foreach (var searchItem in db.SearchTerms)
                     {

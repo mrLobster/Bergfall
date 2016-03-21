@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bergfall.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace Bergfall.Web.Controllers
     {
         public ActionResult Index()
         {
-            
+            var s = new Imaging.ScreenCapture();
+            s.CaptureScreen();
             return View();
         }
 
